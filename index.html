@@ -7,38 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Animation</title>
     <link rel="stylesheet" href="style.css" </head>
-    <div class="box">
-        <div class="form">
-            <h2>Sign in</h2>
-            <div class="inputBox">
-                <input type="text" required="required ">
-                <span>Username</span>
-                <i></i>
-            </div>
-            <div class="inputBox ">
-                <input type="password" required="required ">
-                <span>Password</span>
-                <i></i>
-            </div>
 
-            <div class="links ">
-                <a href="# ">Forgot Password</a>
-                <a href="# ">Signup</a>
-            </div>
-            <div class="button"></div>
-            <input type="submit" value="Login" </div>
-            <div class="btn">
-                <a href="#">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span> Submit
-                </a>
+
+    <body>
+        <!-- <script language="javascript" src="javas.js"></script> -->
+        <div class="box">
+            <div class="form">
+
+                <!-- <h2>Sign in</h2> -->
+                <div class="inputBox">
+                    <input type="text" required>
+                    <span>Username</span>
+                    <i></i>
+                </div>
+                <div class="inputBox ">
+                    <input type="password" class="pass" required>
+                    <span>Password</span>
+                    <i></i>
+                </div>
+
+                <div class="links ">
+                    <a href="# ">Forgot Password</a>
+                    <a href="# ">Signup</a>
+                </div>
+                <div class="check">
+                    <input type="checkbox" id="passwordShow" class="show">
+                    <label for="passwordShow">Show</label>
+                </div>
+
+                <!-- <input type="submit" value="Login" </div> -->
+                <div class="btn">
+                    <a href="#">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span> Submit
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
 
-    </div>
+        </div>
+
+        <script>
+            const show = document.querySelector(".show");
+            const pass = document.querySelector(".pass");
+
+            show.addEventListener("click", () => {
+                if (show.checked) {
+                    pass.setAttribute("type", "text");
+                } else {
+                    pass.setAttribute("type", "password");
+                }
+            })
+        </script>
     </body>
 
 </html>
