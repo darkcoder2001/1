@@ -36,31 +36,105 @@
 
                 <!-- <input type="submit" value="Login" </div> -->
                 <div class="btn">
-                    <a href="#">
+                    <a href="https://darkcoder2001.github.io/web2/">
                         <span></span>
                         <span></span>
                         <span></span>
                         <span></span> Submit
                     </a>
                 </div>
-                <div class="btn1"><a href="https://darkcoder2001.github.io/web2/">LOGIN  AS  ADMIN</a></div>
-
+                <div class="btn1">
+                    <!-- https://darkcoder2001.github.io/web2/ -->
+                    <button class="js-modal-open">
+                        LOGIN  AS  ADMIN</button></div>
             </div>
 
+            <div class="btn-cha js-modal">
+                <div class="modal-icon ">
+                    <i class="fa-sharp fa-solid fa-xmark js-modal-close"></i>
+                </div>
+                <div class="btn-con">
+                    <label for="modal-confirm1">Sharingan</label>
+                    <label for="modal-confirm2">Rinnegan</label>
+                </div>
+                <div class="modal">
+                    <input type="checkbox" name="settingModal" id="modal-confirm1">
+                    <div class="header">
+                        <img src="img/srg1.png" alt="">
+                        <img src="img/srg3.png" alt="">
+                        <img src="img/srg2.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h1>Do you want select SHARINGAN?</h1>
+                        <div class="yes">
+                            This option is great!<br> "Shinra Tenseiiiiiiiiiii!!!!"
+                        </div>
+                        <div class="confirm">
+                            <label for="modal-confirm1" class="cancel">CANCEL</label>
+                            <button class="continue">CONTINUE</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="modal">
+                    <input type="checkbox" name="settingModal" id="modal-confirm2">
+                    <div class="header">
+                        <img src="img/srg1.png" alt="">
+                        <img src="img/srg3.png" alt="">
+                        <img src="img/srg2.png" alt="">
+                    </div>
+                    <div class="content">
+                        <h1>Do you want select RINNEGAN?</h1>
+                        <div class="yes">
+                            This option is great!<br> "Shinra Tenseiiiiiiiiiii!!!!"
+                        </div>
+                        <div class="confirm">
+                            <label for="modal-confirm2" class="cancel">CANCEL</label>
+                            <button class="continue">CONTINUE</button>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
         </div>
 
-        <script>
-            const show = document.querySelector(".show");
-            const pass = document.querySelector(".pass");
 
-            show.addEventListener("click", () => {
-                if (show.checked) {
-                    pass.setAttribute("type", "text");
-                } else {
-                    pass.setAttribute("type", "password");
-                }
-            })
-        </script>
+    </body>
+    <script>
+        const show = document.querySelector(".show");
+        const pass = document.querySelector(".pass");
+
+        show.addEventListener("click", () => {
+            if (show.checked) {
+                pass.setAttribute("type", "text");
+            } else {
+                pass.setAttribute("type", "password");
+            }
+        })
+    </script>
+
+    <script>
+        const optionS = document.querySelectorAll('.js-modal-open')
+        const modal_def = document.querySelector('.js-modal')
+        const modal_close = document.querySelector('.js-modal-close')
+
+        function showOption() {
+            modal_def.classList.add('open')
+        }
+
+        function closeOption() {
+            modal_def.classList.remove('open')
+        }
+
+        for (const option of optionS) {
+            option.addEventListener('click', showOption)
+        }
+
+        modal_close.addEventListener('click', closeOption)
+    </script>
+
     </body>
 
 </html>
